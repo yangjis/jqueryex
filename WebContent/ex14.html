@@ -2,20 +2,47 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<script type="text/javascript" src="/jquery/jquery/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="/jqueryex/jquery/jquery-1.12.4.js"></script>
 <title>Insert title here</title>
 </head>
 <body>
 	
 	<ul>
-		<li id="first" class="red">첫번째 아이템입니다.</li>
-		<li id="second" class="blue"><strong>두번째 아이템입니다.</strong></li>
-		<li id="third" class="del">세번째아이템입니다.</li>
-		<li><strong>네번째 아이템입니다.</strong></li>
+		<li data-no="1" data-userId="aaa" id="first" class="red">첫번째 아이템입니다.</li>
+		<li data-no="2" data-userId="bbb" id="second" class="blue"><strong>두번째 아이템입니다.</strong></li>
+		<li data-no="3" data-userId="ccc" id="third" class="del">세번째아이템입니다.</li>
+		<li data-no="4" data-userId="ddd"><strong>네번째 아이템입니다.</strong></li>
 		
 	</ul>
 
 </body>
+<script type="text/javascript">
+	$("li strong").on("click", function(){
+		console.log("클릭");
+		var $this = $(this);
+		var userId = $this.text();
+		console.log(userId);
+		
+		/*
+		//텍스트 가져오기
+		//$this.text("asdf");
+		
+		//속성중에 아이디를 꺼내와라.
+		var attr = $this.attr("id"); 
+		console.log(attr);
+		
+		//속성중에 클래스를 꺼내와라.
+		var attr = $this.attr("class"); 
+		console.log(attr);
+		
+		//내가 만들어 놓은 항목의 데이터를 불러온다.
+		//내가 항목을 만들고 싶다면 태그 안에 "data-"를 쓰고 그다음 작명을하여 데이터를 넣는다.
+		console.log($this.attr("data-no"));
+		console.log($this.attr("data-userId"));
+		*/
+		
+	});
+</script>
 
 
 

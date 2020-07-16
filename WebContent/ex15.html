@@ -17,5 +17,27 @@
 	<input id="btn" type="button" VALUE="li요소추가" />
 </body>
 
+<script type="text/javascript">
+	$("#btn").on("click",function(){
+		console.log("버튼 눌렀음?");
+		$("ul").append("<li>다섯번째 아이템입니다.</li>");
+		$("ul").append("<li>여섯번째 아이템입니다.</li>");
+		$("ul").append("<li>일곱번째 아이템입니다.</li>");
+		
+		$("#btn").remove();
+	});
+	
+	/*$("li").on("click", function(){
+		console.log("li 눌렀음?");
+	});*/
+	
+	$("ul").on("click","li",function(){
+		var $this = $(this);
+		console.log($this);
+		var str = $this.text();
+		console.log(str);
+	});
+	
+</script>
 
 </html>

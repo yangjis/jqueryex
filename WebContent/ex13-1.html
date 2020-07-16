@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="/jqueryex/jquery/jquery-1.12.4.js"></script>
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>계산기</h1>
+	
+	<input type = "text" id ="left" value="">+
+	<input type = "text" id ="right" value="">=
+	<input type = "text" id ="sum" value="">
+	<button id = "btnCal">계산하기</button>
+	
+
+</body>
+<script type="text/javascript">
+
+	/*$("#right").on("keyup", function(){
+	var num1 = $("#left").val();
+	var num2 = $("#right").val();
+	var sum = Number(num1) + Number(num2);
+	$("#sum").val(sum);
+	})*/
+	
+	$("#sum").on("mouseenter", function(){
+		var num1 = $("#left").val();
+		var num2 = $("#right").val();
+		var sum = Number(num1) + Number(num2);
+		$("#sum").val(sum);
+		})
+</script>
+
+</html>

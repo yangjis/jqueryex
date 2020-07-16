@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<script type="text/javascript" src="/jquery/jquery/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="/jqueryex/jquery/jquery-1.12.4.js"></script>
 <title>Insert title here</title>
 </head>
 <body>
@@ -12,7 +12,21 @@
 	</div>
 
 </body>
-
-
+<script type="text/javascript">
+	/*
+	버튼찾기
+	버튼 클릭 이벤트 찾기
+	클릭했을때 기능 정의
+	변경할 부분을 찾기
+	값 변경
+	*/
+	
+	$("#btn").on("click",function(){
+		//$("#display").html("<font color='red'>양지선</forn>");
+		$("#display").css("color", "red");
+		$("#display").text("양지선");
+	});
+	
+</script>
 
 </html>
